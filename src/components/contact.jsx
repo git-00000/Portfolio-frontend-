@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/contact.css';
 
 const Contact = () => {
@@ -52,7 +52,7 @@ const Contact = () => {
 
     // ✅ Auto-hide success message after 2 seconds
     useEffect(() => {
-        if (status === 'success') {
+        if (status === 'success' || status === 'error') {
             const timer = setTimeout(() => {
                 setStatus('');
             }, 2000);
@@ -74,52 +74,43 @@ const Contact = () => {
                     {/* Contact Info Section */}
                     <div className="contactInfo">
                         {/* --- Address --- */}
-                        <div className="box">
-                            <div className="icon">
-                                {/* Location Icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"
-                                    style={{ fill: '#fff', width: '20px', height: '20px' }}>
-                                    <path d="M215.7 499.2C267 433.2...z" />
-                                </svg>
-                            </div>
-                            <div className="text">
-                                <h3>Address</h3>
-                                <p>
-                                    Matkal, Kalitala <br /> po: Rabindrangar <br />
-                                    kol - 700065
-                                </p>
-                            </div>
-                        </div>
 
-                        {/* --- Phone --- */}
-                        <div className="box">
-                            <div className="icon">
-                                {/* Phone Icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                    style={{ fill: '#fff', width: '20px', height: '20px' }}>
-                                    <path d="M164.9 24.6c-7.7-18.6...z" />
-                                </svg>
-                            </div>
-                            <div className="text">
-                                <h3>Phone</h3>
-                                <p>+917003372615</p>
-                            </div>
-                        </div>
 
-                        {/* --- Email --- */}
-                        <div className="box">
-                            <div className="icon">
-                                {/* Envelope Icon */}
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                    style={{ fill: '#fff', width: '20px', height: '20px' }}>
-                                    <path d="M480 32H32C14.3 32...z" />
-                                </svg>
+                        <>
+                            <div className="box">
+                                <div className="icon">
+                                    <b />
+                                    <i className="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div className="text">
+                                    <h3>Address</h3>
+                                    <p>
+                                        Matkal , Kalitala <br /> po: Rabindrangar <br />
+                                        kol - 700065
+                                    </p>
+                                </div>
                             </div>
-                            <div className="text">
-                                <h3>Email</h3>
-                                <p>koushikbhowmick04@gmail.com</p>
+                            <div className="box">
+                                <div className="icon">
+                                    <b/>
+                                    <i className="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div className="text">
+                                    <h3>Phone</h3>
+                                    <p>+917003372615</p>
+                                </div>
                             </div>
-                        </div>
+                            <div className="box">
+                                <div className="icon">
+                                    <b />
+                                    <i className="fa-solid fa-envelope"></i>
+                                </div>
+                                <div className="text">
+                                    <h3>Email</h3>
+                                    <p>koushikbhowmick04@gmail.com</p>
+                                </div>
+                            </div>
+                        </>
 
                         {/* Social Links */}
                         <h2 className="txt">connect with us</h2>
