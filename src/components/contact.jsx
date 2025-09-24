@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/contact.css';
 
 const Contact = () => {
@@ -27,8 +27,11 @@ const Contact = () => {
         e.preventDefault();
         setStatus('submitting');
 
+        // Use the environment variable for the base URL
+        const apiUrl = process.env.REACT_APP_DJANGO_API_URL;
+
         try {
-            const response = await fetch('http://localhost:8000/api/contacts/', {
+            const response = await fetch(`${apiUrl}/api/contacts/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
