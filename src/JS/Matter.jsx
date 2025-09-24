@@ -81,7 +81,7 @@ const MatterCanvas = () => {
 
     World.add(world, attractiveBody);
 
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 30; i++) {
       let x = Common.random(0, render.options.width);
       let y = Common.random(0, render.options.height);
       let s = Common.random() > 0.6 ? Common.random(10, 80) : Common.random(4, 60);
