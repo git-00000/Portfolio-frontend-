@@ -2,9 +2,10 @@
     box-sizing: border-box;
 }
 
+
 .contact {
     min-height: 60vh;
-    padding: 12px 100px;
+    padding: 30px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +90,7 @@
     position: relative;
     z-index: 1000;
     color: #333;
-    font-size: 1.25em;
+    font-size: 1.4em;
 }
 
 .container .contactInfo .box .text {
@@ -127,7 +128,7 @@
     position: relative;
     display: flex;
     gap: 30px;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .container .contactInfo .sci li {
@@ -147,12 +148,12 @@
 
 .container .contactForm {
     position: relative;
-    width: 34%;
+    width: 33%;
     /* background: repeating-conic-gradient(from var(--a), #b74b4b 0%, #b74b4b 10%, transparent 10%, transparent 50%); */
     background: repeating-conic-gradient(from 27.5deg, #b74b4b 0%, #b74b4b 10%, transparent 10%, transparent 50%);
     animation: animate 6s linear infinite;
     padding: 50px;
-    margin-top: -10px;
+    margin-top: -50px;
 }
 
 .container .contactForm::before {

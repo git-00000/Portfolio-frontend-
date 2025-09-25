@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { FaLinkedinIn, FaInstagram, FaFacebook ,FaPaperPlane  } from 'react-icons/fa';
+import { FaXTwitter ,FaLocationDot ,FaPhoneVolume} from 'react-icons/fa6';
+import { MdEmail } from "react-icons/md";
 import '../style/contact.css';
 
 const Contact = () => {
@@ -12,6 +15,17 @@ const Contact = () => {
 
     // State to manage UI feedback (loading, success, error)
     const [status, setStatus] = useState('');
+
+    // ✅ Use useEffect to control body overflow
+    useEffect(() => {
+        // Add the style when the component mounts
+        document.body.style.overflowY = 'hidden';
+
+        // Cleanup function to remove the style when the component unmounts
+        return () => {
+            document.body.style.overflowY = 'unset'; // Or 'auto'
+        };
+    }, []); // Empty dependency array ensures this runs only on mount and unmount
 
     // Function to handle changes in form inputs
     const handleChange = (e) => {
@@ -50,7 +64,7 @@ const Contact = () => {
         }
     };
 
-    // ✅ Auto-hide success message after 2 seconds
+    // Auto-hide success message after 2 seconds
     useEffect(() => {
         if (status === 'success' || status === 'error') {
             const timer = setTimeout(() => {
@@ -74,13 +88,12 @@ const Contact = () => {
                     {/* Contact Info Section */}
                     <div className="contactInfo">
                         {/* --- Address --- */}
-
-
                         <>
                             <div className="box">
                                 <div className="icon">
-                                    <b />
-                                    <i className="fa-solid fa-location-dot"></i>
+                                    <b></b>
+                                    <i><FaLocationDot/></i>
+                                    
                                 </div>
                                 <div className="text">
                                     <h3>Address</h3>
@@ -92,8 +105,8 @@ const Contact = () => {
                             </div>
                             <div className="box">
                                 <div className="icon">
-                                    <b/>
-                                    <i className="fa-solid fa-phone-volume"></i>
+                                    <b></b>
+                                    <i><FaPhoneVolume/></i>
                                 </div>
                                 <div className="text">
                                     <h3>Phone</h3>
@@ -102,8 +115,8 @@ const Contact = () => {
                             </div>
                             <div className="box">
                                 <div className="icon">
-                                    <b />
-                                    <i className="fa-solid fa-envelope"></i>
+                                    <b></b>
+                                    <i><MdEmail/></i>
                                 </div>
                                 <div className="text">
                                     <h3>Email</h3>
@@ -114,6 +127,13 @@ const Contact = () => {
 
                         {/* Social Links */}
                         <h2 className="txt">connect with us</h2>
+                        <ul className="sci">
+                            <li><a href=""><FaFacebook size={24} color="#fff" /></a></li>
+                            <li><a href=""><FaXTwitter size={24} color="#fff" /></a></li>
+                            <li><a href=""><FaInstagram size={24} color="#fff" /></a></li>
+                            <li><a href=""><FaLinkedinIn size={24} color="#fff" /></a></li>
+                        </ul>
+
                         <ul className="sci">
                             <li>
                                 <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
@@ -132,6 +152,7 @@ const Contact = () => {
                     <div className="contactForm" id="contactForm">
                         <form onSubmit={handleSubmit}>
                             <h2>Get In Touch</h2>
+
                             <div className="inputBox">
                                 <input id="name" name="name" required type="text"
                                     value={formData.name} onChange={handleChange} />
@@ -159,7 +180,8 @@ const Contact = () => {
                                 <button className="send-btn" type="submit"
                                     disabled={status === 'submitting'}>
                                     <span className="btn-text">
-                                        {status === 'submitting' ? 'Sending...' : 'Send'}
+                                        <i><FaPaperPlane /></i>
+                                        {status === 'submitting' ? 'Sending...' : ' Send'}
                                     </span>
                                 </button>
                             </div>
