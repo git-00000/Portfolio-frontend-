@@ -2,9 +2,11 @@
 
 import React from 'react';
 import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaBriefcase, FaTrophy, FaCalendarCheck, FaChalkboardTeacher, FaBookOpen } from 'react-icons/fa';
-import {FaArrowUpRightFromSquare} from 'react-icons/fa6';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
+import MyCV from '../assets/My CV.pdf';
+import SoftSkill from '../assets/Developing Soft Skills and Personality.pdf';
 
 const About = () => {
     return (
@@ -12,12 +14,12 @@ const About = () => {
             <div className="main">
             </div>
             <div className="header">
-                <a download="koushik's CV" href="/My CV.pdf" target="_blank">
+                <a href={MyCV} download="koushik's CV.pdf" target='blank'>
                     <button className="download-btn">
                         <FaDownload /> Download cv
                     </button>
                 </a>
-               <Link to="/contact"> 
+                <Link to="/contact">
                     <button className="contact-btn">
                         <FaEnvelope /> Contact Me
                     </button>
@@ -136,13 +138,8 @@ const About = () => {
                     </h2>
                     <ul className="tab">
                         <li>
-                            Soft Skill Development (NPTEL) by IIT Kanpur{" "}
-                            <a
-                                download="Koushik's NPTEL certificate"
-                                href="/Developing Soft Skills and Personality.pdf"
-                                target="_blank">
-                                <FaDownload className="list-download-btn" />
-                            </a>{" "}
+                            Soft Skill Development (NPTEL) by IIT Kanpur
+                            <a href={SoftSkill} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
                         </li>
                         <li>Deep Learning Specialization (Coursera)</li>
                     </ul>
