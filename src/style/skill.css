@@ -199,3 +199,124 @@ html {
     --fill: #00f0ff;
     /* Neon Blue */
 }
+
+/* ---------- Large Tablets / Small Laptops (max-width: 1024px) ---------- */
+@media (max-width: 1024px) {
+    .intro {
+        gap: 6rem;
+    }
+
+    .skill-panel {
+        min-width: 300px;
+        height: auto;
+    }
+
+    .heading h2 {
+        font-size: 26px;
+    }
+
+    .heading p {
+        font-size: 15px;
+    }
+}
+
+/* ---------- Tablets (max-width: 768px) ---------- */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 4rem;
+    }
+
+    .skills-container {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .skill-panel {
+        min-width: unset;
+        width: 100%;
+        height: auto;
+    }
+
+    .ring {
+        --size: 140px;
+    }
+
+    .label {
+        font-size: 1rem;
+    }
+
+    .heading h2 {
+        font-size: 24px;
+    }
+
+    .heading p {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* ---------- Mobile Phones (max-width: 480px) ---------- */
+@media (max-width: 480px) {
+    .intro {
+        margin-top: 3rem;
+        gap: 2.5rem;
+        flex-direction: column;
+    }
+
+    .skills-container {
+        width: 95%;
+    }
+
+    .ring {
+        --size: 120px;
+    }
+
+    .label {
+        font-size: 0.9rem;
+    }
+
+    .skill-panel {
+        padding: 10px 15px;
+        width: 100%;
+        height: auto;
+    }
+
+    .skill-panel h4 {
+        font-size: 1.2rem;
+    }
+
+    .skill-name {
+        font-size: 0.85rem;
+    }
+
+    .heading h2 {
+        font-size: 22px;
+    }
+
+    .heading p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* ---------- Very Small Devices (max-width: 360px) ---------- */
+@media (max-width: 360px) {
+    .ring {
+        --size: 100px;
+    }
+
+    .skill-panel h4 {
+        font-size: 1rem;
+    }
+
+    .skill-name {
+        font-size: 0.8rem;
+    }
+
+    .heading h2 {
+        font-size: 20px;
+    }
+}

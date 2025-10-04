@@ -7,6 +7,7 @@ import '../style/About.css';
 import { Link } from 'react-router-dom';
 import MyCV from '../assets/My CV.pdf';
 import SoftSkill from '../assets/Developing Soft Skills and Personality.pdf';
+import ScrollDown from '../JS/ScrollDownT';
 
 const About = () => {
     return (
@@ -73,6 +74,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
+                <ScrollDown />
             </section>
             <div className="container-ab">
                 <section className="Aboutme" id="education">

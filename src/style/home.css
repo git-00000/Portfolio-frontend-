@@ -1,4 +1,3 @@
-
 .main {
     width: 90vw;
 }
@@ -57,16 +56,24 @@
 }
 
 .cursor {
-  font-weight: 100;
-  animation: blink-cursor 0.6s infinite;
-  display: inline-block;
-  margin-left: 5px;
-  color: #b74b4b; /* Change to your desired color */
+    font-weight: 100;
+    animation: blink-cursor 0.6s infinite;
+    display: inline-block;
+    margin-left: 5px;
+    color: #b74b4b;
+    /* Change to your desired color */
 }
 
 @keyframes blink-cursor {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 /* --- Social Icons --- */
@@ -179,4 +186,152 @@ footer {
 .bottom-text p {
     color: #777;
     font-family: 'Fira Sans', sans-serif;
+}
+
+/* === Responsive Design for Home Page === */
+
+/* Tablets and small laptops (≤1024px) */
+@media (max-width: 1024px) {
+    .infocontiner {
+        width: 90vw;
+        margin: 100px auto;
+        gap: 4rem;
+    }
+
+    .devpic img {
+        width: 28vw;
+        height: auto;
+    }
+
+    .name {
+        font-size: 3rem;
+    }
+
+    .about {
+        font-size: 1.4rem;
+    }
+
+
+}
+
+/* Large phones and phablets (≤768px) */
+@media (max-width: 768px) {
+    
+    .infocontiner {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin: 60px 0 60px;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .devinfo {
+        align-items: center;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        font-size: 1.2rem;
+    }
+
+    .moreabout {
+        font-size: 1rem;
+        width: 80%;
+    }
+
+    .devpic {
+        height: auto;
+    }
+
+    .devpic img {
+        width: 45vw;
+        height: auto;
+    }
+
+    .social-icons a {
+        margin: 1.2rem 0.8rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.4rem;
+        font-size: 1.1rem;
+    }
+
+    footer {
+        position: absolute;
+        top: 900px;
+    }
+}
+
+/* Mobile phones (≤480px) */
+@media (max-width: 480px) {
+
+    html,
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .main {
+        width: 100vw;
+    }
+
+    .infocontiner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 80px auto 40px;
+        width: 95vw;
+        gap: 2rem;
+    }
+
+    .devinfo {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .hello {
+        font-size: 1.5rem;
+    }
+
+    .name {
+        font-size: 2.2rem;
+    }
+
+    .about {
+        font-size: 1.1rem;
+    }
+
+    .moreabout {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .devpic img {
+        width: 65vw;
+        height: auto;
+    }
+
+    .social-icons a {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 1.2rem;
+        margin: 1rem 0.6rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 900px;
+    }
+
 }

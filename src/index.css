@@ -63,14 +63,4 @@ body::-webkit-scrollbar-thumb {
         height: 100vh;
         width: 100vw;
     }
-
-    .main,
-    .decoration,
-    .particle {
-        visibility: hidden;
-    }
-
-    .open_in_desk {
-        visibility: visible;
-    }
 }

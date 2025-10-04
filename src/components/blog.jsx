@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../style/blog.css';
+// import ScrollDown from '../JS/ScrollDownT';
 
 import me1 from '../assets/me1.jpg';
 import blog2 from '../assets/blog2.jpg';
@@ -57,6 +58,7 @@ const Blog = () => {
                     <p>
                         Thoughts, tips, and stories on web development, creativity, and life.
                     </p>
+                    
                 </section>
 
                 {blogPosts.map(blog => (

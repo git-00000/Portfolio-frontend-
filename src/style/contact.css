@@ -303,16 +303,100 @@
     opacity: 1;
 }
 
+/* ────────────────────────────────
+   📱 RESPONSIVE DESIGN
+──────────────────────────────── */
 
-
-@media(max-width: 778px) {
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
     .contact {
-        padding: 50px;
+        padding: 40px 60px;
+    }
+
+    .container {
+        gap: 30px;
+    }
+
+    .container .contactForm {
+        width: 45%;
+        padding: 40px;
+    }
+
+    .container .contactInfo {
+        width: 45%;
+    }
+
+    .contact .content h2 {
+        font-size: 2.2em;
+    }
+}
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+    .contact {
+        padding: 60px 20px;
     }
 
     .container {
         flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
 
+    .container .contactInfo,
+    .container .contactForm {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .container .contactForm {
+        padding: 30px;
+        margin-top: 0;
+    }
+
+    .container .contactInfo .box {
+        padding: 10px 0;
+    }
+
+    .contact .content h2 {
+        font-size: 2em;
+    }
+
+    .contact .content p {
+        font-size: 0.95em;
+    }
+}
+
+/* Mobile Phones (≤480px) */
+@media (max-width: 480px) {
+
+    html,
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .contact {
+        padding: 60px 15px;
+        overflow-y: auto;
+    }
+
+    .contact .content h2 {
+        font-size: 1.8em;
+    }
+
+    .contact .content p {
+        font-size: 0.9em;
+        line-height: 1.6;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .container .contactInfo {
+        padding: 60px 0px;
     }
 
     .container .contactInfo,
@@ -321,10 +405,73 @@
     }
 
     .container .contactForm {
-        padding: 40px;
+        padding: 20px;
+        border-width: 8px;
     }
 
-    .container .contactForm form {
-        padding: 10px;
+    .container .contactForm form h2 {
+        font-size: 1.6em;
+    }
+
+    .container .contactForm form .inputBox input,
+    .container .contactForm form .inputBox textarea {
+        font-size: 1em;
+    }
+
+    .container .contactForm form .inputBox span {
+        font-size: 0.9em;
+    }
+
+    .container .contactInfo .sci {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .container .contactInfo .sci li a {
+        font-size: 1.3em;
+    }
+
+    .send-btn {
+        width: 120px;
+        height: 38px;
+        font-size: 0.9em;
+    }
+}
+
+/* Very Small Devices (≤360px) */
+@media (max-width: 360px) {
+
+    html,
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .contact {
+        padding: 15px 10px;
+        overflow-y: auto;
+    }
+
+    .contact .content h2 {
+        font-size: 1.5em;
+    }
+
+    .container .contactForm {
+        padding: 15px;
+    }
+
+    .container .contactForm form h2 {
+        font-size: 1.4em;
+    }
+
+    .container .contactForm form .inputBox input,
+    .container .contactForm form .inputBox textarea {
+        font-size: 0.9em;
+    }
+
+    .send-btn {
+        width: 100px;
+        height: 35px;
+        font-size: 0.85em;
     }
 }

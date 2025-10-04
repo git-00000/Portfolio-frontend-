@@ -105,3 +105,161 @@ body {
 .more-text.show {
   display: inline;
 }
+
+
+/* =======================
+   🌐 Responsive Design for Blog Page
+   ======================= */
+
+/* 💻 Large Tablets and Small Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .blogcontainer {
+    margin: 60px 40px;
+    padding: 15px;
+  }
+
+  .blogitem p {
+    max-width: 100%;
+  }
+
+  .blog-thumb {
+    height: 220px;
+  }
+}
+
+/* 📱 Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .blogcontainer {
+    margin: 40px 30px;
+  }
+
+  .blog-hero {
+    padding: 40px 15px;
+  }
+
+  .blog-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .blog-hero p {
+    font-size: 1rem;
+  }
+
+  .blogitem {
+    padding: 18px;
+  }
+
+  .blogitem h2 {
+    font-size: 1.3rem;
+  }
+
+  .blogitem p {
+    font-size: 0.95rem;
+  }
+
+  .read-more {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📲 Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .blogcontainer {
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .blog-hero {
+    padding: 30px 15px;
+    border-radius: 10px;
+  }
+
+  .blog-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .blog-hero p {
+    font-size: 0.95rem;
+  }
+
+  .blogitem {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .blog-thumb {
+    height: 180px;
+  }
+
+  .blogitem h2 {
+    font-size: 1.1rem;
+  }
+
+  .blogitem p {
+    font-size: 0.9rem;
+  }
+
+  .read-more {
+    font-size: 0.85rem;
+    padding: 8px 12px;
+  }
+}
+
+/* 📱 Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .blogcontainer {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .blog-hero {
+    padding: 25px 10px;
+  }
+
+  .blog-hero h1 {
+    font-size: 1.3rem;
+  }
+
+  .blog-hero p {
+    font-size: 0.85rem;
+  }
+
+  .blogitem {
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .blogitem h2 {
+    font-size: 1rem;
+  }
+
+  .blogitem p {
+    font-size: 0.85rem;
+  }
+
+  .read-more {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+/* 📏 Extra Tall Mobile Screens (1080 × 2400 px and similar) */
+@media (max-width: 1080px) and (min-height: 2000px) {
+  .blogcontainer {
+    margin-top: 100px;
+  }
+
+  .blogitem {
+    margin-bottom: 25px;
+  }
+
+  .blog-thumb {
+    height: 200px;
+  }
+
+  .blog-hero {
+    margin-bottom: 40px;
+  }
+}

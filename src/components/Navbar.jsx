@@ -1,12 +1,19 @@
 // frontend/src/components/Navbar.jsx
 
 import React, { useState, useEffect } from 'react';
+// Import the Menu and Close icons for the toggle button
+import { IoMenu, IoClose } from 'react-icons/io5'; 
 import { NavLink } from 'react-router-dom';
 import '../style/Navbar.css';
 
 const Navbar = () => {
+    // State to handle the scroll effect (already present)
     const [scrolled, setScrolled] = useState(false);
+    
+    // NEW STATE: To toggle the mobile menu visibility
+    const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
+    // Scroll effect logic (kept as is)
     useEffect(() => {
         const handleScroll = () => {
             const isScrolled = window.scrollY > 0;
@@ -15,35 +22,49 @@ const Navbar = () => {
             }
         };
 
-        // Add a scroll event listener
         window.addEventListener('scroll', handleScroll);
-
-        // Clean up the event listener when the component unmounts
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [scrolled]); // Re-run the effect if the scrolled state changes
+    }, [scrolled]);
+    
+    // NEW FUNCTION: Toggles the mobile menu
+    const toggleMenu = () => {
+        setIsMenuOpen(prev => !prev);
+    };
+
+    // Helper function to close the menu on link click
+    const closeMenu = () => {
+        if (isMenuOpen) {
+            setIsMenuOpen(false);
+        }
+    };
 
     return (
-        <div className={`sidebar ${scrolled ? 'scrolled' : ''}`}> {/* Add the 'scrolled' class here */}
-
+        // The main container. The 'active-menu' class will be added for the overlay effect.
+        <div className={`sidebar ${scrolled ? 'scrolled' : ''} ${isMenuOpen ? 'active-menu' : ''}`}> 
+            
+            {/* The existing desktop header part. You might want to restructure this to be just the logo. */}
             <div className="hamburger">
-                <div className="hover_text_div">Navbar</div>
-                <span className="ham">
-                    <div className="hamborder" />
-                    <span className="ham">Koushik Bhowmick</span>
-                </span>
-                <span className="cross">
-                    <div className="crossborder" />
-                </span>
+                {/* Removed the extra ham spans as the main nav is below */}
+                <span className="ham logo-text">Koushik Bhowmick</span>
             </div>
-            <nav>
-                <NavLink to="/" exact activeClassName="active">Home</NavLink>
-                <NavLink to="/about" activeClassName="active">About Me</NavLink>
-                <NavLink to="/skills" activeClassName="active">Skills</NavLink>
-                <NavLink to="/contact" activeClassName="active">Contact</NavLink>
-                <NavLink to="/blogs" activeClassName="active">Blogs</NavLink>
+            
+            {/* Main Navigation Links. Add 'active' class when menu is open */}
+            <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}> 
+                <NavLink to="/" exact activeClassName="active" onClick={closeMenu}>Home</NavLink>
+                <NavLink to="/about" activeClassName="active" onClick={closeMenu}>About Me</NavLink>
+                <NavLink to="/skills" activeClassName="active" onClick={closeMenu}>Skills</NavLink>
+                <NavLink to="/contact" activeClassName="active" onClick={closeMenu}>Contact</NavLink>
+                <NavLink to="/blogs" activeClassName="active" onClick={closeMenu}>Blogs</NavLink>
             </nav>
+            
+            {/* The Hamburger/Close Icon (NewHam) */}
+            <span className='NewHam' onClick={toggleMenu}>
+                {/* Use the toggle state to switch icons */}
+                {isMenuOpen ? <IoClose size={30} /> : <IoMenu size={30} />}
+            </span>
+            
         </div>
     );
 };
