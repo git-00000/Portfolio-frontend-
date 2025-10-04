@@ -167,7 +167,6 @@ nav a.active {
         display: block; /* Ensure it stays in the flow if it holds the logo */
     }
     
-    /* Hide the text links inside the original 'hamburger' if they are redundant */
     .hamburger span.ham {
         margin-left: 0; /* Reset margin */
         font-size: 0.9rem; /* Adjust font size */
@@ -178,7 +177,6 @@ nav a.active {
     }
     
     .sidebar {
-        /* Remove transparent background so content is fully covered by nav overlay */
         background-color: transparent; 
         /* Restore padding for the logo/title alignment */
         padding: 1rem 5%; 
