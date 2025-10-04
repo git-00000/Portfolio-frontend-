@@ -10,7 +10,7 @@ import MatterCanvas from '../JS/Matter';
 import me1 from '../assets/me1.jpg';
 import rick from '../assets/RICK.png';
 
-const home = () => {
+const Home = () => {
 
     const [isMobile, setIsMobile] = useState(false);
 
@@ -79,4 +79,4 @@ const home = () => {
     );
 };
 
-export default home;
+export default Home;
