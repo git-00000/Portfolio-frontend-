@@ -105,11 +105,8 @@ nav a.active {
 
 @media (max-width: 768px) {
 
-
-     /* 1. Show the New Hamburger Icon and position it properly */
     .NewHam {
         display: block; 
-        /* Reposition relative to the sidebar/viewport */
         position: fixed; /* Use fixed so it stays visible */
         top: 40px; 
         right: 30px; /* Adjust as needed */
