@@ -114,7 +114,6 @@ nav a.active {
         color: #E5E4D1; /* Icon color */
     }
 
-    /* 2. Style the main navigation container for the full-screen overlay */
     .sidebar nav {
         /* KEY: Positioning for full-screen overlay */
         position: fixed;
@@ -145,7 +144,6 @@ nav a.active {
         transform: translateX(0); /* Brings the menu into the center view */
     }
     
-    /* 4. Style the centered links */
     nav a {
         /* Overrides your previous visibility: hidden; */
         visibility: visible !important; 
@@ -162,7 +160,6 @@ nav a.active {
         transform: scale(1.1); 
     }
     
-    /* 5. Hide the confusing original 'hamburger' area and its content */
     .hamburger {
         /* This likely contains the logo text and hover_text_div */
         position: static; 
@@ -173,14 +170,13 @@ nav a.active {
     /* Hide the text links inside the original 'hamburger' if they are redundant */
     .hamburger span.ham {
         margin-left: 0; /* Reset margin */
-        font-size: 1.5rem; /* Adjust font size */
+        font-size: 0.7rem; /* Adjust font size */
     }
     
     .hover_text_div, .cross {
         display: none; /* Hide confusing unused elements */
     }
     
-    /* 6. Ensure the main sidebar/navbar container doesn't block the overlay */
     .sidebar {
         /* Remove transparent background so content is fully covered by nav overlay */
         background-color: transparent; 
