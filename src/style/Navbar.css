@@ -170,7 +170,7 @@ nav a.active {
     /* Hide the text links inside the original 'hamburger' if they are redundant */
     .hamburger span.ham {
         margin-left: 0; /* Reset margin */
-        font-size: 0.7rem; /* Adjust font size */
+        font-size: 0.9rem; /* Adjust font size */
     }
     
     .hover_text_div, .cross {
