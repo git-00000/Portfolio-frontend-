@@ -108,7 +108,7 @@ nav a.active {
     .NewHam {
         display: block; 
         position: fixed; /* Use fixed so it stays visible */
-        top: 35px; 
+        top: 33px; 
         right: 30px; /* Adjust as needed */
         z-index: 1001; 
         color: #E5E4D1; /* Icon color */
