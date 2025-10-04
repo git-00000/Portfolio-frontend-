@@ -249,6 +249,7 @@ html {
     }
 
     .heading h2 {
+        margin-top: 10px;
         font-size: 24px;
     }
 
@@ -271,7 +272,7 @@ html {
     }
 
     .ring {
-        --size: 120px;
+        display: none;
     }
 
     .label {
@@ -293,6 +294,7 @@ html {
     }
 
     .heading h2 {
+        margin-top: 10px;
         font-size: 22px;
     }
 
@@ -305,7 +307,7 @@ html {
 /* ---------- Very Small Devices (max-width: 360px) ---------- */
 @media (max-width: 360px) {
     .ring {
-        --size: 100px;
+        display: none;
     }
 
     .skill-panel h4 {
@@ -317,6 +319,7 @@ html {
     }
 
     .heading h2 {
+        margin-top: 10px;
         font-size: 20px;
     }
 }

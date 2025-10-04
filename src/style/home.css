@@ -216,7 +216,7 @@ footer {
 
 /* Large phones and phablets (≤768px) */
 @media (max-width: 768px) {
-    
+
     .infocontiner {
         flex-direction: column;
         align-items: center;
@@ -313,8 +313,8 @@ footer {
     }
 
     .devpic img {
-        width: 65vw;
-        height: auto;
+        height: 35vh;
+        width: 35vw;
     }
 
     .social-icons a {

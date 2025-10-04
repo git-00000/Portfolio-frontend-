@@ -53,8 +53,6 @@ nav a.active {
 .NewHam{
     display: none;
     position: static; 
-    top: 30px;
-    right: 80px;
 }
 
 .ham {
@@ -113,7 +111,7 @@ nav a.active {
         display: block; 
         /* Reposition relative to the sidebar/viewport */
         position: fixed; /* Use fixed so it stays visible */
-        top: 30px; 
+        top: 40px; 
         right: 30px; /* Adjust as needed */
         z-index: 1001; 
         color: #E5E4D1; /* Icon color */
