@@ -154,10 +154,10 @@ nav a.active {
     nav a {
         /* Overrides your previous visibility: hidden; */
         visibility: visible !important; 
-        font-size: 2rem; /* Larger font size for mobile */
+        font-size: 1.2rem;
         margin: 1.5rem 0 !important; /* Vertical spacing */
         color: #E5E4D1;
-        border-bottom: none; /* Remove underline on links in the mobile menu */
+        border-bottom: none !important;
     }
     
     nav a:hover,
