@@ -186,7 +186,7 @@ nav a.active {
         background-color: rgba(10, 10, 10, 0.3);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        padding: 0.5rem 5%;
+        padding: 1.2rem 5%;
         transition: backdrop-filter 0.3s ease;
     }
 
