@@ -50,9 +50,9 @@ nav a.active {
     display: flex;
 }
 
-.NewHam{
+.NewHam {
     display: none;
-    position: static; 
+    position: static;
 }
 
 .ham {
@@ -106,12 +106,15 @@ nav a.active {
 @media (max-width: 768px) {
 
     .NewHam {
-        display: block; 
-        position: fixed; /* Use fixed so it stays visible */
-        top: 33px; 
-        right: 30px; /* Adjust as needed */
-        z-index: 1001; 
-        color: #E5E4D1; /* Icon color */
+        display: block;
+        position: fixed;
+        /* Use fixed so it stays visible */
+        top: 33px;
+        right: 30px;
+        /* Adjust as needed */
+        z-index: 1001;
+        color: #E5E4D1;
+        /* Icon color */
     }
 
     .sidebar nav {
@@ -121,65 +124,70 @@ nav a.active {
         left: 0;
         width: 100vw;
         height: 100vh;
-        
-        /* KEY: Centering the links */
-        display: flex; /* Enable flexbox for centering */
+
+        display: flex;
         flex-direction: column;
-        justify-content: center; /* Center links vertically */
-        align-items: center; /* Center links horizontally */
-        
+        justify-content: center;
+        align-items: center;
+
         /* Overlay appearance (Semi-transparent black) */
-        background-color: rgba(10, 10, 10, 0.95); 
-        
+        background-color: rgba(10, 10, 10, 0.95);
+
         /* Start hidden off-screen to the right/left */
-        transform: translateX(100%); /* Hides the menu off-screen initially */
-        transition: transform 0.5s ease-in-out; 
-        z-index: 1000; 
-        
-        /* Overrides desktop margin */
-        margin-left: 0; 
+        transform: translateX(100%);
+        /* Hides the menu off-screen initially */
+        transition: transform 0.5s ease-in-out;
+        z-index: 1000;
+
+        margin-left: 0;
     }
 
     .nav-links.active {
-        transform: translateX(0); /* Brings the menu into the center view */
+        transform: translateX(0);
+        /* Brings the menu into the center view */
     }
-    
+
     nav a {
-        /* Overrides your previous visibility: hidden; */
-        visibility: visible !important; 
+        visibility: visible !important;
         font-size: 1.2rem;
-        margin: 1.5rem 0 !important; /* Vertical spacing */
+        margin: 1.5rem 0 !important;
         color: #E5E4D1;
         border-bottom: none !important;
     }
-    
+
     nav a:hover,
     nav a.active {
         color: #b74b4b;
-        /* Optional: Add a subtle effect */
-        transform: scale(1.1); 
+        transform: scale(1.1);
     }
-    
+
     .hamburger {
         /* This likely contains the logo text and hover_text_div */
-        position: static; 
+        position: static;
         width: auto;
-        display: block; /* Ensure it stays in the flow if it holds the logo */
+        display: block;
+        /* Ensure it stays in the flow if it holds the logo */
     }
-    
+
     .hamburger span.ham {
-        margin-left: 0; /* Reset margin */
-        font-size: 0.9rem; /* Adjust font size */
+        margin-left: 0;
+        /* Reset margin */
+        font-size: 0.9rem;
+        /* Adjust font size */
     }
-    
-    .hover_text_div, .cross {
-        display: none; /* Hide confusing unused elements */
+
+    .hover_text_div,
+    .cross {
+        display: none;
+        /* Hide confusing unused elements */
     }
-    
+
     .sidebar {
-        background-color: transparent; 
-        /* Restore padding for the logo/title alignment */
-        padding: 1rem 5%; 
+        background-color: rgba(10, 10, 10, 0.3);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 1rem 5%;
+        transition: backdrop-filter 0.3s ease;
     }
 
 }

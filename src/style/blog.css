@@ -210,7 +210,7 @@ body {
 @media (max-width: 480px) {
   .blogcontainer {
     width: 95%;
-    margin: 37px auto;
+    margin: 65px auto;
   }
 
   .blog-hero {
