@@ -47,7 +47,12 @@ const Navbar = () => {
             {/* The existing desktop header part. You might want to restructure this to be just the logo. */}
             <div className="hamburger">
                 {/* Removed the extra ham spans as the main nav is below */}
-                <span className="ham logo-text">Koushik Bhowmick</span>
+                <span className="ham logo-text">
+                    <span className='logo-sign'>&lt;</span>
+                    Koushik Bhowmick
+                    <span className='logo-sign'>/&gt;</span>
+                    </span>
+                    
             </div>
             
             {/* Main Navigation Links. Add 'active' class when menu is open */}
