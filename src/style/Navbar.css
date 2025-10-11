@@ -93,7 +93,6 @@ nav a:hover::after {
     font-size: 1.8rem;
 }
 
-
 .hover_text_div {
     visibility: hidden;
     display: none;
