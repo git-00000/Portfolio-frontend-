@@ -68,7 +68,7 @@ const Blog = () => {
                         <p className="blog-text">
                             {expandedBlogs[blog.id] ? blog.fullText : blog.summary}
                         </p>
-                        <button onClick={() => toggleExpand(blog.id)} className="btn btn-sm read-more">
+                        <button onClick={() => toggleExpand(blog.id)} className="btn-sm read-more">
                             {expandedBlogs[blog.id] ? 'Read Less' : 'Read More'}
                         </button>
                     </div>

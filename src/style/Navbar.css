@@ -28,21 +28,40 @@ nav a {
     color: #E5E4D1;
     margin-left: 60px;
     font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    transition: color 0.3s ease;
+    padding-bottom: 4px;
+    position: relative; 
+    /* text-decoration: none; */
 }
 
-nav a:hover,
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0%;
+    height: 2px;
+    background-color: #b74b4b;
+    transition: width 0.3s ease;
+}
+
 nav a.active {
     color: #b74b4b;
-    border-bottom: 3px solid #b74b4b;
+}
+
+nav a:hover {
+    color: #b74b4b;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 /* --- Hamburger Menu Styles --- */
 .hamburger {
     position: absolute;
     cursor: pointer;
-    top: 0px;
+    top: 12px;
     left: -3px;
 }
 
@@ -190,7 +209,7 @@ nav a.active {
         transition: backdrop-filter 0.3s ease;
     }
 
-    .sidebar.scrolled{
+    .sidebar.scrolled {
         margin-top: -5px;
     }
 

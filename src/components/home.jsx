@@ -53,7 +53,7 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="buttons">
-                            <Link className="btn" to="/contact">Hire me</Link>
+                            <Link download="koushik's CV.pdf" target='blank' className="btn" >Download CV</Link>
                         </div>
                     </div>
                     <div className="devpic">
