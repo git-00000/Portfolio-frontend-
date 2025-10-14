@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaLinkedinIn, FaInstagram, FaFacebook ,FaPaperPlane  } from 'react-icons/fa';
-import { FaXTwitter ,FaLocationDot ,FaPhoneVolume} from 'react-icons/fa6';
+import { FaLinkedinIn, FaInstagram, FaFacebook, FaPaperPlane } from 'react-icons/fa';
+import { FaXTwitter, FaLocationDot, FaPhoneVolume } from 'react-icons/fa6';
 import { MdEmail } from "react-icons/md";
 import '../style/contact.css';
 
@@ -42,7 +42,11 @@ const Contact = () => {
         setStatus('submitting');
 
         try {
-            const response = await fetch('http://localhost:8000/api/contacts/', {
+            // ❌ Django backend (old)
+            // const response = await fetch('http://localhost:8000/api/contacts/', {
+
+            // ✅ Express + MongoDB backend (new)
+            const response = await fetch('https://portfolio-backend-mongo-nd6u.onrender.com/api/contacts', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -92,8 +96,8 @@ const Contact = () => {
                             <div className="box">
                                 <div className="icon">
                                     <b></b>
-                                    <i><FaLocationDot/></i>
-                                    
+                                    <i><FaLocationDot /></i>
+
                                 </div>
                                 <div className="text">
                                     <h3>Address</h3>
@@ -106,7 +110,7 @@ const Contact = () => {
                             <div className="box">
                                 <div className="icon">
                                     <b></b>
-                                    <i><FaPhoneVolume/></i>
+                                    <i><FaPhoneVolume /></i>
                                 </div>
                                 <div className="text">
                                     <h3>Phone</h3>
@@ -116,7 +120,7 @@ const Contact = () => {
                             <div className="box">
                                 <div className="icon">
                                     <b></b>
-                                    <i><MdEmail/></i>
+                                    <i><MdEmail /></i>
                                 </div>
                                 <div className="text">
                                     <h3>Email</h3>

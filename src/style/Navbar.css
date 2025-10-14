@@ -1,5 +1,5 @@
 .sidebar {
-    margin-top: 10px;
+    margin-top: 5px;
     position: fixed;
     top: 0;
     left: 0;
@@ -11,6 +11,8 @@
     z-index: 999;
     backdrop-filter: none;
     transition: backdrop-filter 0.3s ease;
+    backdrop-filter: blur(20px);
+    border-bottom:0.1px solid #E5E4D1;
 }
 
 .sidebar.scrolled {
@@ -31,7 +33,7 @@ nav a {
     transition: color 0.3s ease;
     padding-bottom: 4px;
     position: relative; 
-    /* text-decoration: none; */
+    text-decoration: none;
 }
 
 nav a::after {

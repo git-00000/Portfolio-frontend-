@@ -5,12 +5,12 @@
 
 .contact {
     min-height: 60vh;
-    padding: 30px 100px;
+    padding: 35px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #131313;
+    background: #121212;
 }
 
 .contact .content {
@@ -21,9 +21,9 @@
 }
 
 .contact .content h2 {
-    font-size: 2.6em;
+    font-size: 2.5em;
     color: #fff;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .contact .content p {

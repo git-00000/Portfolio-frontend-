@@ -131,6 +131,72 @@ body {
   display: inline;
 }
 
+.blog-footer {
+
+  position: static;
+  width: 100vw;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 30px 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  border-top: 3px solid #6b8986;
+}
+
+.footer-content {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5;
+}
+
+.lord-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
+}
+
+.lord-icon lord-icon {
+  cursor: pointer;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+
+.lord-icon lord-icon:hover {
+  transform: scale(1.1);
+  /* Slight enlargement on hover */
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  padding: 5px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #2ecc71;
+  /* Highlight color on hover/focus (e.g., a vibrant blue) */
+  text-decoration: underline;
+  /* Add underline on hover for better accessibility */
+  transform: translateY(-2px);
+  /* Subtle lift effect */
+}
+
 
 /* =======================
    🌐 Responsive Design for Blog Page
@@ -149,6 +215,32 @@ body {
 
   .blog-thumb {
     height: 220px;
+  }
+
+  .blog-footer {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px 50px;
+  }
+
+  .footer-content {
+    margin-bottom: 0;
+    order: 1;
+    /* Puts copyright in the center or first (adjust as needed) */
+  }
+
+  .footer-links {
+    order: 2;
+    /* Puts links to the side */
+    /* If you want the links on the right and copyright on the left: 
+           Change .blog-footer justify-content to space-between 
+           and set a fixed order or use auto margins. */
+  }
+
+  /* Center the copyright on larger screens, adjusting lord-icon spacing */
+  .footer-content {
+    /* On desktop, you might prefer the icons next to the text */
+    justify-content: flex-start;
   }
 }
 

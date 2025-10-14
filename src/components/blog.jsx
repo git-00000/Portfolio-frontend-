@@ -58,7 +58,7 @@ const Blog = () => {
                     <p>
                         Thoughts, tips, and stories on web development, creativity, and life.
                     </p>
-                    
+
                 </section>
 
                 {blogPosts.map(blog => (
@@ -74,6 +74,51 @@ const Blog = () => {
                     </div>
                 ))}
             </div>
+
+            <footer className="blog-footer">
+                <p className='footer-content'>
+
+                    &copy; {new Date().getFullYear()} Koushik Bhowmick. All rights reserved.
+
+
+                    <span className='lord-icon'>
+
+                        <lord-icon
+                            src="https://cdn.lordicon.com/fgctxlnd.json"
+                            trigger="morph"
+                            state="morph-circle"
+                            colors="primary:#4bb3fd,secondary:#242424"
+                            style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/ioihllwu.json"
+                            trigger="hover"
+                            colors="primary:#242424,secondary:#ffffff"
+                            style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/bjdrneur.json"
+                            trigger="hover"
+                            state="hover-draw"
+                            colors="primary:#ffffff,secondary:#242424"
+                            style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/wgtaryar.json"
+                            trigger="hover"
+                            state="hover-rotate"
+                            colors="primary:#4bb3fd,secondary:#f28ba8,tertiary:#ffc738,quaternary:#242424"
+                            style={{ "width": "25px", "height": "25px" }}>
+                        </lord-icon>
+                    </span>
+
+                </p>
+                <div className="footer-links">
+                    <a href="#privacy" className="footer-link">Privacy Policy</a>
+                    <a href="#terms" className="footer-link">Terms of Service</a>
+                </div>
+            </footer>
+
         </div>
     );
 };

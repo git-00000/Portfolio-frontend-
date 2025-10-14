@@ -12,10 +12,12 @@ const ScrollDown = () => {
   };
 
   return (
+
     <a href="#" className="scroll-down" onClick={handleScroll}>
       <span>Scroll down</span>
       <FaArrowDown className="arrow-icon" />
     </a>
+
   );
 };
 

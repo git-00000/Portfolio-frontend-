@@ -179,9 +179,9 @@ section::before {
 .download-btn,
 .contact-btn {
   display: inline-block;
-  width: 180px;
+  width: 175px;
   height: 40px;
-  margin: 20px 10px;
+  margin: 12px 10px;
   background-color: black;
   text-align: center;
   line-height: 40px;
