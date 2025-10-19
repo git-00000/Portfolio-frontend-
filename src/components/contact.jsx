@@ -152,7 +152,6 @@ const Contact = () => {
                         </ul>
                     </div>
 
-                    {/* Contact Form */}
                     <div className="contactForm" id="contactForm">
                         <form onSubmit={handleSubmit}>
                             <h2>Get In Touch</h2>

@@ -42,12 +42,34 @@ const blogPosts = [
 const Blog = () => {
     // State to track which blogs are expanded
     const [expandedBlogs, setExpandedBlogs] = useState({});
+    // State for the review input
+    const [review, setReview] = useState('');
+    // State for the confirmation message
+    const [reviewStatus, setReviewStatus] = useState('');
 
     const toggleExpand = (id) => {
         setExpandedBlogs(prevState => ({
             ...prevState,
             [id]: !prevState[id]
         }));
+    };
+
+    const handleReviewChange = (event) => {
+        setReview(event.target.value);
+    };
+
+    const handleReviewSubmit = (event) => {
+        event.preventDefault(); 
+
+        if (review.trim() === '') {
+            setReviewStatus('Please enter a review before submitting.');
+            return;
+        }
+        
+        setReviewStatus('Thanks for your review! It has been submitted successfully. 👍');
+        setReview('');
+        
+        setTimeout(() => setReviewStatus(''), 1000);
     };
 
     return (
@@ -58,7 +80,6 @@ const Blog = () => {
                     <p>
                         Thoughts, tips, and stories on web development, creativity, and life.
                     </p>
-
                 </section>
 
                 {blogPosts.map(blog => (
@@ -76,13 +97,26 @@ const Blog = () => {
             </div>
 
             <footer className="blog-footer">
+                <div className="review-section">
+                    <h3>Leave a Review!</h3>
+                    <form onSubmit={handleReviewSubmit} className="review-form">
+                        <textarea
+                            value={review}
+                            onChange={handleReviewChange}
+                            placeholder="Tell me what you think of the blog..."
+                            rows="4"
+                            className="review-textarea"
+                        />
+                        <button type="submit" className="btn-sm submit-review">Submit Review</button>
+                    </form>
+                    {reviewStatus && <p className="review-status">{reviewStatus}</p>}
+                </div>
+                
+                {/* <hr style={{width: '100%', border: '1px solid rgba(255, 255, 255, 0.1)'}} /> */}
+
                 <p className='footer-content'>
-
                     &copy; {new Date().getFullYear()} Koushik Bhowmick. All rights reserved.
-
-
                     <span className='lord-icon'>
-
                         <lord-icon
                             src="https://cdn.lordicon.com/fgctxlnd.json"
                             trigger="morph"
@@ -111,14 +145,12 @@ const Blog = () => {
                             style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
                     </span>
-
                 </p>
                 <div className="footer-links">
                     <a href="#privacy" className="footer-link">Privacy Policy</a>
                     <a href="#terms" className="footer-link">Terms of Service</a>
                 </div>
             </footer>
-
         </div>
     );
 };
