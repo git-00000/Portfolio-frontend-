@@ -9,7 +9,7 @@ import MatterCanvas from '../JS/Matter';
 // Import images from your assets folder
 import me1 from '../assets/me1.jpg';
 import rick from '../assets/RICK.png';
-import CV from '../assets/My_CV.jpg';
+import CV from '../assets/My_CV.pdf';
 
 const Home = () => {
 
@@ -54,7 +54,10 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="buttons">
-                            <Link download = {CV} target='blank' className="btn" >Download CV</Link>
+                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn">
+                                Download CV
+                            </a>
+
                         </div>
                     </div>
                     <div className="devpic">

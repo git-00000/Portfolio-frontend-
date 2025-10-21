@@ -5,8 +5,8 @@ import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaBriefcase, FaTr
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
-import MyCV from '../assets/My CV.pdf';
-import SoftSkill from '../assets/Developing Soft Skills and Personality.pdf';
+import CV from '../assets/My_CV.pdf';
+import SoftSkill from '../assets/Documents/Developing Soft Skills and Personality.pdf';
 import ScrollDown from '../JS/ScrollDownT';
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
             <div className="main">
             </div>
             <div className="header">
-                <a href={MyCV} download="koushik's CV.pdf" target='blank'>
+                <a href={CV} download="koushik's CV.pdf" target='_blank'>
                     <button className="download-btn">
                         <FaDownload /> Download cv
                     </button>
