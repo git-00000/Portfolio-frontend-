@@ -58,18 +58,34 @@ const Blog = () => {
         setReview(event.target.value);
     };
 
-    const handleReviewSubmit = (event) => {
-        event.preventDefault(); 
+    const handleReviewSubmit = async (event) => {
+        event.preventDefault();
 
         if (review.trim() === '') {
             setReviewStatus('Please enter a review before submitting.');
             return;
         }
-        
-        setReviewStatus('Thanks for your review! It has been submitted successfully. 👍');
-        setReview('');
-        
-        setTimeout(() => setReviewStatus(''), 1000);
+
+
+        try {
+            const response = await fetch('https://portfolio-backend-mongo-nd6u.onrender.com/api/blogs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content: review })
+            });
+
+            if (response.ok) {
+                setReviewStatus('Thanks for your review! It has been submitted successfully. 👍');
+                setReview('');
+            } else {
+                setReviewStatus('Failed to submit review. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error submitting review:', error);
+            setReviewStatus('Server error. Please try again later.');
+        }
+
+        setTimeout(() => setReviewStatus(''), 2000);
     };
 
     return (
@@ -107,11 +123,13 @@ const Blog = () => {
                             rows="4"
                             className="review-textarea"
                         />
-                        <button type="submit" className="btn-sm submit-review">Submit Review</button>
+                        {reviewStatus === 'Thanks for your review! It has been submitted successfully. 👍' ? null : (
+                            <button type="submit" className="btn-sm submit-review">Submit Review</button>
+                        )}
                     </form>
                     {reviewStatus && <p className="review-status">{reviewStatus}</p>}
                 </div>
-                
+
                 {/* <hr style={{width: '100%', border: '1px solid rgba(255, 255, 255, 0.1)'}} /> */}
 
                 <p className='footer-content'>
