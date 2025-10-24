@@ -1,15 +1,34 @@
 // frontend/src/components/About.jsx
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaBriefcase, FaTrophy, FaCalendarCheck, FaChalkboardTeacher, FaBookOpen } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
 import CV from '../assets/My_CV.pdf';
 import SoftSkill from '../assets/Documents/Developing Soft Skills and Personality.pdf';
+import Prog from '../assets/Documents/Introduction to Programming in C.pdf';
 import ScrollDown from '../JS/ScrollDownT';
 
 const About = () => {
+
+    useEffect(() => {
+        const cards = document.querySelectorAll('.Aboutme');
+        const observer = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); // animate only once
+                    }
+                });
+            },
+            { threshold: 0.2 } // trigger when 20% visible
+        );
+
+        cards.forEach(card => observer.observe(card));
+    }, []);
+
     return (
         <div>
             <div className="main">
@@ -36,11 +55,19 @@ const About = () => {
                         <div className="timeline-content">
                             <h3>
                                 Personal Portfolio Website.{" "}
-                                <FaArrowUpRightFromSquare
-                                    style={{
-                                        cursor: "pointer",
-                                    }}
-                                />{" "}
+                                <a
+                                    href="https://github.com/git-00000/Portfolio-frontend-"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: "inherit", textDecoration: "none" }}
+                                >
+
+                                    <FaArrowUpRightFromSquare
+                                        style={{
+                                            cursor: "pointer",
+                                        }}
+                                    />{" "}
+                                </a>
                             </h3>
                             <p>
                                 A responsive portfolio built with HTML, CSS, and JavaScript to showcase my work.
@@ -53,11 +80,21 @@ const About = () => {
                         <div className="timeline-content">
                             <h3>
                                 Daily Digestive Email application.{" "}
-                                <FaArrowUpRightFromSquare
-                                    style={{
-                                        cursor: "pointer",
-                                    }}
-                                />
+                                <a
+                                    href="https://github.com/git-00000/Daily-Digest-Email-Python-Project-"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ color: "inherit", textDecoration: "none" }}
+                                >
+
+                                    <FaArrowUpRightFromSquare
+
+                                        style={{
+                                            cursor: "pointer",
+                                        }}
+                                    />
+                                </a>
+
                             </h3>
                             <p>Developed a app to sending emails using Python.</p>
                             <span className="tech">Tech: Python, Pandas, Scikit-learn</span>
@@ -90,7 +127,7 @@ const About = () => {
                         <li>class 10 ,Baranagar RamaKrishna Mission Ashrama High School</li>
                     </ul>
                 </section>
-                <section className="Aboutme" id="experience">
+                {/* <section className="Aboutme" id="experience">
                     <h2>
                         <FaBriefcase /> Experience
                     </h2>
@@ -98,14 +135,15 @@ const About = () => {
                         <li>Software Developer at Tech Solutions, 2020-2021</li>
                         <li>AI Researcher at Innovate Labs, 2022-Present</li>
                     </ul>
-                </section>
+                </section> */}
                 <section className="Aboutme" id="awards">
                     <h2>
                         <FaTrophy />
                         Awards and Achievements
                     </h2>
                     <ul className="tab">
-                        <li> 87% in Madhyamik</li>
+                        <li> Secured 87% in class 10th board</li>
+                        <li> Secured 75% in class 12th board</li>
                         <li>
                             Participated Karate International{" "}
                             <FaDownload className="list-download-btn" />{" "}
@@ -129,7 +167,7 @@ const About = () => {
                     </h2>
                     <ul className="tab">
                         <li>
-                            Presented a paper on "Advancements in Neural Networks" at XYZ Conference, 2022
+                            Presented a paper on "NANOTECH FOR GREEN FUTURE" at UEM
                         </li>
                     </ul>
                 </section>
@@ -143,7 +181,10 @@ const About = () => {
                             Soft Skill Development (NPTEL) by IIT Kanpur
                             <a href={SoftSkill} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
                         </li>
-                        <li>Deep Learning Specialization (Coursera)</li>
+                        <li>Introduction To Programming In C (NPTEL)
+                            <a href={Prog} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
+                        </li>
+
                     </ul>
                 </section>
             </div>

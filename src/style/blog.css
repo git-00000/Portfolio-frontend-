@@ -245,6 +245,7 @@ body {
 
 .submit-review:hover {
     background-color: #2a9df4; 
+    box-shadow: 0 0 25px #2a9df4;
 }
 
 .review-status {

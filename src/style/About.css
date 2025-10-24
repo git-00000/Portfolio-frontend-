@@ -66,10 +66,6 @@ body {
   transition: transform 0.3s ease;
 }
 
-.timeline-content:hover {
-  transform: scale(1);
-}
-
 .timeline-content h3 {
   margin: 0 0 10px;
   font-size: 1.3rem;
@@ -110,11 +106,6 @@ body {
   padding-left: 10px;
 }
 
-.Aboutme h2 i {
-  color: #e63946;
-  /* Icon color */
-  font-size: 1.3rem;
-}
 
 ul {
   display: block;
@@ -129,15 +120,40 @@ ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2)
 }
 
+
+.Aboutme h2,
+.Aboutme ul.tab li {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+}
+
+.Aboutme {
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: all 0.8s ease-out;
+}
+
+/* When card becomes visible */
+.Aboutme.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+.Aboutme:nth-child(even) {
+    transform: translateX(80px);
+}
+.Aboutme:nth-child(even).show {
+    transform: translateX(0);
+}
+
+
 section {
   padding: 20px;
   margin: 20px 0;
-  background: #1e1e1e;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s ease;
 }
 
 
