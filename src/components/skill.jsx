@@ -32,7 +32,7 @@ const skill = () => {
                                         color: "#ee1111",
                                     }}
                                 />
-                                HTML/CSS
+                                MERN stack
                             </div>
                             <div className="skill-bar">
                                 <div
@@ -52,7 +52,7 @@ const skill = () => {
                                         color: "#F0DB4F",
                                     }}
                                 />
-                                Node Js
+                                Django
                             </div>
                             <div className="skill-bar">
                                 <div
