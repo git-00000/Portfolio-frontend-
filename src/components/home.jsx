@@ -49,12 +49,12 @@ const Home = () => {
                             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                                 <FaXTwitter />
                             </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/koushik.me_/" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </a>
                         </div>
                         <div className="buttons">
-                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn">
+                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn" data-text = "Download CV">
                                 Download CV
                             </a>
 

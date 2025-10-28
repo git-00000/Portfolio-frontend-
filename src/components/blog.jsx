@@ -7,7 +7,6 @@ import blog2 from '../assets/blog2.jpg';
 import blog4 from '../assets/blog4.jpg';
 import blog1 from '../assets/blog1.png';
 
-// Define a separate data structure for your blogs
 const blogPosts = [
     {
         id: '1',
@@ -40,12 +39,10 @@ const blogPosts = [
 ];
 
 const Blog = () => {
-    // State to track which blogs are expanded
     const [expandedBlogs, setExpandedBlogs] = useState({});
-    // State for the review input
     const [review, setReview] = useState('');
-    // State for the confirmation message
     const [reviewStatus, setReviewStatus] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const toggleExpand = (id) => {
         setExpandedBlogs(prevState => ({
@@ -66,6 +63,7 @@ const Blog = () => {
             return;
         }
 
+        setIsSubmitting(true);
 
         try {
             const response = await fetch('https://portfolio-backend-mongo-nd6u.onrender.com/api/blogs', {
@@ -83,16 +81,18 @@ const Blog = () => {
         } catch (error) {
             console.error('Error submitting review:', error);
             setReviewStatus('Server error. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+            setTimeout(() => setReviewStatus(''), 2000);
         }
 
-        setTimeout(() => setReviewStatus(''), 2000);
     };
 
     return (
         <div className="main">
             <div className="blogcontainer">
                 <section className="blog-hero">
-                    <h1>Blogs by Rick - The Legend</h1>
+                    <h1>Dreams, Code & Coffee – By Koushik</h1>
                     <p>
                         Thoughts, tips, and stories on web development, creativity, and life.
                     </p>
@@ -122,9 +122,14 @@ const Blog = () => {
                             placeholder="Tell me what you think of the blog..."
                             rows="4"
                             className="review-textarea"
+                            disabled={isSubmitting}
                         />
                         {reviewStatus === 'Thanks for your review! It has been submitted successfully. 👍' ? null : (
-                            <button type="submit" className="btn-sm submit-review">Submit Review</button>
+
+                            <button type="submit" className="btn-sm submit-review" disabled={isSubmitting}>
+                                {isSubmitting ? "Submitting..." : "Submit Review"}
+                            </button>
+
                         )}
                     </form>
                     {reviewStatus && <p className="review-status">{reviewStatus}</p>}
@@ -135,19 +140,24 @@ const Blog = () => {
                 <p className='footer-content'>
                     &copy; {new Date().getFullYear()} Koushik Bhowmick. All rights reserved.
                     <span className='lord-icon'>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/fgctxlnd.json"
-                            trigger="morph"
-                            state="morph-circle"
-                            colors="primary:#4bb3fd,secondary:#242424"
-                            style={{ "width": "25px", "height": "25px" }}>
-                        </lord-icon>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/ioihllwu.json"
-                            trigger="hover"
-                            colors="primary:#242424,secondary:#ffffff"
-                            style={{ "width": "25px", "height": "25px" }}>
-                        </lord-icon>
+                        <a href="https://www.linkedin.com/in/koushik-bhowmick-a832a5319/" target='-blank'>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/fgctxlnd.json"
+                                trigger="morph"
+                                state="morph-circle"
+                                colors="primary:#4bb3fd,secondary:#242424"
+                                style={{ "width": "25px", "height": "25px" }}>
+                            </lord-icon>
+
+                        </a>
+                        <a href="https://github.com/git-00000/" target='-blank'>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/ioihllwu.json"
+                                trigger="hover"
+                                colors="primary:#242424,secondary:#ffffff"
+                                style={{ "width": "25px", "height": "25px" }}>
+                            </lord-icon>
+                        </a>
                         <lord-icon
                             src="https://cdn.lordicon.com/bjdrneur.json"
                             trigger="hover"
@@ -155,13 +165,17 @@ const Blog = () => {
                             colors="primary:#ffffff,secondary:#242424"
                             style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
-                        <lord-icon
-                            src="https://cdn.lordicon.com/wgtaryar.json"
-                            trigger="hover"
-                            state="hover-rotate"
-                            colors="primary:#4bb3fd,secondary:#f28ba8,tertiary:#ffc738,quaternary:#242424"
-                            style={{ "width": "25px", "height": "25px" }}>
-                        </lord-icon>
+
+                        <a href="https://www.instagram.com/koushik.me_/" target='_blank'>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wgtaryar.json"
+                                trigger="hover"
+                                state="hover-rotate"
+                                colors="primary:#4bb3fd,secondary:#f28ba8,tertiary:#ffc738,quaternary:#242424"
+                                href="https://www.instagram.com/koushik.me_/"
+                                style={{ "width": "25px", "height": "25px" }}>
+                            </lord-icon>
+                        </a>
                     </span>
                 </p>
                 <div className="footer-links">

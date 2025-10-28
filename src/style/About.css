@@ -1,9 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #121212;
   color: #e0e0e0;
 }
+
+/* <div class="relative h-full w-full bg-black"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div><div class="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div></div> */
 
 .container-ab {
   width: 90%;
@@ -174,7 +175,6 @@ section::before {
 
 .container-ab section:hover::before {
   opacity: 1;
-  /* border-radius: 25px; */
 }
 
 .container-ab section:hover {
@@ -192,8 +192,24 @@ section::before {
   z-index: 1000;
 }
 
-.download-btn,
 .contact-btn {
+  display: inline-block;
+  width: 175px;
+  height: 40px;
+  margin: 12px 10px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: 0.3rem;
+  background-color: #b74b4b;
+  border: 2px solid #b74b4b;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.download-btn{
   display: inline-block;
   width: 175px;
   height: 40px;
@@ -212,8 +228,8 @@ section::before {
   transition: 0.3s ease;
 }
 
-.download-btn:hover,
-.contact-btn:hover {
+.contact-btn:hover,
+.download-btn:hover{
   transform: scale3d(1.03, 1.03, 1.03);
   background-color: #b74b4b;
   color: black;

@@ -30,8 +30,10 @@ const About = () => {
     }, []);
 
     return (
+        
         <div>
             <div className="main">
+                
             </div>
             <div className="header">
                 <a href={CV} download="koushik's CV.pdf" target='_blank'>
