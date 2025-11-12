@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import '../style/blog.css';
+import Lenis from '@studio-freight/lenis';
 // import ScrollDown from '../JS/ScrollDownT';
 
 import me1 from '../assets/me1.jpg';
@@ -148,6 +149,25 @@ const Blog = () => {
 
     };
 
+    useEffect(() => {
+        const lenis = new Lenis({
+            duration: 1.2, // Adjust scroll speed
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
+            smoothWheel: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy(); // Prevent memory leaks on unmount
+        };
+    }, []);
+
     return (
         <div className="main">
             <div className="blogcontainer">
@@ -204,7 +224,7 @@ const Blog = () => {
                 <p className='footer-content'>
                     &copy; {new Date().getFullYear()} Koushik Bhowmick. All rights reserved.
                     <span className='lord-icon'>
-                        <a href="https://www.linkedin.com/in/koushik-bhowmick-a832a5319/" target='-blank' rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/koushik-bhowmick-a832a5319/" target='_blank' rel="noopener noreferrer">
                             <lord-icon
                                 src="https://cdn.lordicon.com/fgctxlnd.json"
                                 trigger="morph"
@@ -214,7 +234,7 @@ const Blog = () => {
                             </lord-icon>
 
                         </a>
-                        <a href="https://github.com/git-00000/" target='-blank' rel="noopener noreferrer">
+                        <a href="https://github.com/git-00000/" target='_blank' rel="noopener noreferrer">
                             <lord-icon
                                 src="https://cdn.lordicon.com/ioihllwu.json"
                                 trigger="hover"

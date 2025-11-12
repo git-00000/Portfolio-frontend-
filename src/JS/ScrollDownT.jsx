@@ -12,10 +12,10 @@ const ScrollDown = () => {
 
   return (
     <>
-      <button className="scroll-down" onClick={handleScroll}>
+      <a href='#' className="scroll-down" onClick={handleScroll}>
         <span>Scroll down</span>
         <FaArrowDown className="arrow-icon" />
-      </button>
+      </a>
 
       {/* Inline CSS inside JSX */}
       <style>{`

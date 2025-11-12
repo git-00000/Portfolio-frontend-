@@ -3,6 +3,7 @@
 import React, { useEffect } from 'react';
 import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaTrophy, FaCalendarCheck, FaChalkboardTeacher, FaBookOpen } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
+import Lenis from '@studio-freight/lenis';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
 import CV from '../assets/My_CV.pdf';
@@ -13,13 +14,32 @@ import ScrollDown from '../JS/ScrollDownT';
 const About = () => {
 
     useEffect(() => {
+        const lenis = new Lenis({
+            duration: 1.2, // Adjust scroll speed
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
+            smoothWheel: true,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
+        return () => {
+            lenis.destroy(); // Prevent memory leaks on unmount
+        };
+    }, []);
+
+    useEffect(() => {
         const cards = document.querySelectorAll('.Aboutme');
         const observer = new IntersectionObserver(
             entries => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
-                        observer.unobserve(entry.target); 
+                        observer.unobserve(entry.target);
                     }
                 });
             },
@@ -30,10 +50,10 @@ const About = () => {
     }, []);
 
     return (
-        
+
         <div>
             <div className="main">
-                
+
             </div>
             <div className="header">
                 <a href={CV} download="koushik's CV.pdf" target='_blank' rel="noopener noreferrer">
