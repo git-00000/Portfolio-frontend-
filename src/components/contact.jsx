@@ -132,10 +132,10 @@ const Contact = () => {
                         {/* Social Links */}
                         <h2 className="txt">connect with us</h2>
                         <ul className="sci">
-                            <li><a href=""><FaFacebook size={24} color="#fff" /></a></li>
-                            <li><a href=""><FaXTwitter size={24} color="#fff" /></a></li>
-                            <li><a href=""><FaInstagram size={24} color="#fff" /></a></li>
-                            <li><a href=""><FaLinkedinIn size={24} color="#fff" /></a></li>
+                            <li><a href="#"><FaFacebook size={24} color="#fff" /></a></li>
+                            <li><a href="#"><FaXTwitter size={24} color="#fff" /></a></li>
+                            <li><a href="#"><FaInstagram size={24} color="#fff" /></a></li>
+                            <li><a href="#"><FaLinkedinIn size={24} color="#fff" /></a></li>
                         </ul>
 
                         <ul className="sci">

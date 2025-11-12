@@ -205,7 +205,7 @@ const Blog = () => {
                 <p className='footer-content'>
                     &copy; {new Date().getFullYear()} Koushik Bhowmick. All rights reserved.
                     <span className='lord-icon'>
-                        <a href="https://www.linkedin.com/in/koushik-bhowmick-a832a5319/" target='-blank'>
+                        <a href="https://www.linkedin.com/in/koushik-bhowmick-a832a5319/" target='-blank' rel="noopener noreferrer">
                             <lord-icon
                                 src="https://cdn.lordicon.com/fgctxlnd.json"
                                 trigger="morph"
@@ -215,7 +215,7 @@ const Blog = () => {
                             </lord-icon>
 
                         </a>
-                        <a href="https://github.com/git-00000/" target='-blank'>
+                        <a href="https://github.com/git-00000/" target='-blank' rel="noopener noreferrer">
                             <lord-icon
                                 src="https://cdn.lordicon.com/ioihllwu.json"
                                 trigger="hover"
@@ -231,7 +231,7 @@ const Blog = () => {
                             style={{ "width": "25px", "height": "25px" }}>
                         </lord-icon>
 
-                        <a href="https://www.instagram.com/koushik.me_/" target='_blank'>
+                        <a href="https://www.instagram.com/koushik.me_/" target='_blank' rel="noopener noreferrer">
                             <lord-icon
                                 src="https://cdn.lordicon.com/wgtaryar.json"
                                 trigger="hover"
