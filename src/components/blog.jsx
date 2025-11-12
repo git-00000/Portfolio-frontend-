@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import '../style/blog.css';
 // import ScrollDown from '../JS/ScrollDownT';
 

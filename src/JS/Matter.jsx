@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import Matter from 'matter-js';
-import $ from 'jquery';
 import '../index.css'
 
 const MatterCanvas = () => {
@@ -27,7 +26,6 @@ const MatterCanvas = () => {
       Render = Matter.Render,
       World = Matter.World,
       Body = Matter.Body,
-      Mouse = Matter.Mouse,
       Common = Matter.Common,
       Bodies = Matter.Bodies;
 

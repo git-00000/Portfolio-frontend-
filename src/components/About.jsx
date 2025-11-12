@@ -1,7 +1,7 @@
 // frontend/src/components/About.jsx
 
 import React, { useEffect } from 'react';
-import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaBriefcase, FaTrophy, FaCalendarCheck, FaChalkboardTeacher, FaBookOpen } from 'react-icons/fa';
+import { FaDownload, FaEnvelope, FaLightbulb, FaGraduationCap, FaTrophy, FaCalendarCheck, FaChalkboardTeacher, FaBookOpen } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
@@ -19,11 +19,11 @@ const About = () => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('show');
-                        observer.unobserve(entry.target); // animate only once
+                        observer.unobserve(entry.target); 
                     }
                 });
             },
-            { threshold: 0.2 } // trigger when 20% visible
+            { threshold: 0.2 }
         );
 
         cards.forEach(card => observer.observe(card));
@@ -36,7 +36,7 @@ const About = () => {
                 
             </div>
             <div className="header">
-                <a href={CV} download="koushik's CV.pdf" target='_blank'>
+                <a href={CV} download="koushik's CV.pdf" target='_blank' rel="noopener noreferrer">
                     <button className="download-btn">
                         <FaDownload /> Download cv
                     </button>
@@ -184,7 +184,7 @@ const About = () => {
                             <a href={SoftSkill} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
                         </li>
                         <li>Introduction To Programming In C (NPTEL)
-                            <a href={Prog} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
+                            <a href={Prog} download="Koushik's NPTEL certificate" target='blank' rel="noopener noreferrer"><FaDownload className="list-download-btn" /></a>
                         </li>
 
                     </ul>
