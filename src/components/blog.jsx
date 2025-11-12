@@ -28,7 +28,7 @@ const Button = ({ initialLikes, blogId }) => {
 
     // Calculate the counts to display for the animation
     const countOne = likeCount; // Current or unliked count
-    const countTwo = likeCount + 1; // Count when liked
+    // const countTwo = likeCount + 1; // Count when liked
 
     // Determine which count to show in the "one" and "two" slots for the animation
     const displayedCountOne = isLiked ? countOne - 1 : countOne;
