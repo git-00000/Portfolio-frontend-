@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Link } from 'react-router-dom';
 import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import TypingEffect from '../JS/TypingEffect';
@@ -54,7 +53,7 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="buttons">
-                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn" data-text = "Download CV">
+                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn" data-text = "Download CV" rel="noopener noreferrer">
                                 Download CV
                             </a>
 
