@@ -6,10 +6,7 @@ import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 import Lenis from '@studio-freight/lenis';
 import '../style/About.css';
 import { Link } from 'react-router-dom';
-import CV from '../assets/My_CV.pdf';
-import SoftSkill from '../assets/Documents/Developing Soft Skills and Personality.pdf';
-import Prog from '../assets/Documents/Introduction to Programming in C.pdf';
-import ScrollDown from '../JS/ScrollDownT';
+// import ScrollDown from '../JS/ScrollDownT';
 
 const About = () => {
 
@@ -56,7 +53,7 @@ const About = () => {
 
             </div>
             <div className="header">
-                <a href={CV} download="koushik's CV.pdf" target='_blank' rel="noopener noreferrer">
+                <a href= "/assets/My_CV.pdf" download="koushik's CV.pdf" target='_blank' rel="noopener noreferrer">
                     <button className="download-btn">
                         <FaDownload /> Download cv
                     </button>
@@ -133,7 +130,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <ScrollDown />
+                {/* <ScrollDown /> */}
             </section>
             <div className="container-ab">
                 <section className="Aboutme" id="education">
@@ -201,10 +198,10 @@ const About = () => {
                     <ul className="tab">
                         <li>
                             Soft Skill Development (NPTEL) by IIT Kanpur
-                            <a href={SoftSkill} download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
+                            <a href="/assets/Documents/public/assets/Documents/Developing Soft Skills and Personality.pdf" download="Koushik's NPTEL certificate" target='blank'><FaDownload className="list-download-btn" /></a>
                         </li>
                         <li>Introduction To Programming In C (NPTEL)
-                            <a href={Prog} download="Koushik's NPTEL certificate" target='blank' rel="noopener noreferrer"><FaDownload className="list-download-btn" /></a>
+                            <a href="/assets/Documents/public/assets/Documents/Introduction to Programming in C.pdf" download="Koushik's NPTEL certificate" target='blank' rel="noopener noreferrer"><FaDownload className="list-download-btn" /></a>
                         </li>
 
                     </ul>

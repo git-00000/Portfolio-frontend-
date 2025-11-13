@@ -5,10 +5,6 @@ import TypingEffect from '../JS/TypingEffect';
 import '../style/home.css';
 import MatterCanvas from '../JS/Matter';
 
-// Import images from your assets folder
-import me1 from '../assets/me1.jpg';
-import rick from '../assets/RICK.png';
-import CV from '../assets/My_CV.pdf';
 
 const Home = () => {
 
@@ -53,7 +49,7 @@ const Home = () => {
                             </a>
                         </div>
                         <div className="buttons">
-                            <a href={CV} download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn" data-text = "Download CV" rel="noopener noreferrer">
+                            <a href="/assets/Documents/My_CV.pdf" download="Koushik_Bhowmick_CV.pdf" target="_blank" className="btn" data-text = "Download CV" rel="noopener noreferrer">
                                 Download CV
                             </a>
 
@@ -61,10 +57,10 @@ const Home = () => {
                     </div>
                     <div className="devpic">
                         <div className="flip_front">
-                            <img alt="koushik bhowmick" className="front" src={me1} />
+                            <img alt="koushik bhowmick" className="front" src="/assets/me1.jpg" />
                         </div>
                         <div className="flip_back">
-                            <img alt="koushik bhowmick" className="front" src={rick} />
+                            <img alt="koushik bhowmick" className="front" src="/assets/RICK.png" />
                         </div>
                     </div>
                 </div>
