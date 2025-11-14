@@ -163,6 +163,8 @@ nav a:hover::after {
         margin-left: 0;
     }
 
+    
+
     .nav-links.active {
         transform: translateX(0);
         /* Brings the menu into the center view */

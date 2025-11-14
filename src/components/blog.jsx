@@ -1,6 +1,5 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState  } from 'react';
 import '../style/blog.css';
-import Lenis from '@studio-freight/lenis';
 // import ScrollDown from '../JS/ScrollDownT';
 
 // import me1 from '../assets/me1.jpg';
@@ -148,25 +147,6 @@ const Blog = () => {
         }
 
     };
-
-    useEffect(() => {
-        const lenis = new Lenis({
-            duration: 1.2, // Adjust scroll speed
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing
-            smoothWheel: true,
-        });
-
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
-        requestAnimationFrame(raf);
-
-        return () => {
-            lenis.destroy(); // Prevent memory leaks on unmount
-        };
-    }, []);
 
     return (
         <div className="main">

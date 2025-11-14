@@ -61,7 +61,7 @@ export default function Skills() {
       placed.some((p) => {
         const dx = p.x - x;
         const dy = p.y - y;
-        return Math.sqrt(dx * dx + dy * dy) < p.size / 2 + size / 2 + 40;
+        return Math.sqrt(dx * dx + dy * dy) < p.size / 2 + size / 2 + 20;
       });
 
     circles.forEach((circle) => {
