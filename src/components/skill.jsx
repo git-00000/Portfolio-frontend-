@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaPython, FaJava, FaHtml5, FaCss3Alt, FaReact, FaGitAlt } from "react-icons/fa";
-import { SiC, SiCplusplus, SiJavascript, SiMysql, SiMongodb, SiTensorflow, SiPytorch, SiOpencv } from "react-icons/si";
+import { SiC, SiCplusplus, SiJavascript, SiMysql, SiMongodb, SiTensorflow, SiPytorch, SiOpencv ,SiDjango,
+  SiFlask } from "react-icons/si";
 import "../style/skill.css";
 
 const SKILLS = [
@@ -19,12 +20,14 @@ const SKILLS = [
   { name: "TensorFlow", icon: <SiTensorflow color="#FF6F00" /> },
   { name: "PyTorch", icon: <SiPytorch color="#EE4C2C" /> },
   { name: "OpenCV", icon: <SiOpencv color="#5C3EE8" /> },
+  { name: "Django", icon: <SiDjango color="#217555ff" /> },
+  { name: "Flask", icon: <SiFlask color="#A8B9CC" /> },
 ];
 
 
 const ROWS = [
   [
-    { title: "Programming Languages", items: ["Python", "C", "C++", "Java"] },
+    { title: "Programming Languages", items: ["Python", "C", "C++"] },
     { title: "Web Technologies", items: ["HTML", "CSS", "JavaScript", "React"] },
     { title: "Databases & Tools", items: ["MySQL", "MongoDB", "Git"] },
     { title: "Frameworks & Libraries", items: ["TensorFlow", "PyTorch", "OpenCV"] },
@@ -35,9 +38,8 @@ const ROWS = [
       items: [
         "Data Structures & Algorithms",
         "Machine Learning",
-        "Deep Learning",
+        "Deep Learning (CNN)",
         "YOLO Object Detection",
-        "Explainable AI (XAI)",
       ],
     },
     {
