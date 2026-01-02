@@ -169,14 +169,14 @@
 
 .devpic {
     border-radius: 50%;
-    height: 54vh;
+    height: 45vh;
     box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .devpic img {
     position: relative;
-    height: 53.8vh;
-    width: 20vw;
+    height: 47vh;
+    width: 21vw;
     border-radius: 50%;
     box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
@@ -185,6 +185,7 @@
 
 .flip_front {
     position: relative;
+    top: 40px;
     backface-visibility: hidden;
     transition: all 0.3s ease-in-out;
     transform: perspective(500px) rotateY(0deg);
@@ -192,7 +193,7 @@
 
 .flip_back {
     position: absolute;
-    top: 19.3vh;
+    top: 21vh;
     background: transparent;
     backface-visibility: hidden;
     transition: all 0.3s ease-in-out;

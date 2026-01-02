@@ -57,7 +57,7 @@ const Home = () => {
                     </div>
                     <div className="devpic">
                         <div className="flip_front">
-                            <img alt="koushik bhowmick" className="front" src="/assets/me1.jpg" />
+                            <img alt="koushik bhowmick" className="front" src="/assets/mee.jpeg" />
                         </div>
                         <div className="flip_back">
                             <img alt="koushik bhowmick" className="front" src="/assets/RICK.png" />
